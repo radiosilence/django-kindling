@@ -9,6 +9,7 @@ FILES = (
     ('config.rb', False),
     ('requirements.txt', False),
     ('fabfile.py', False),
+    ('settings/__init__.py', True),
     ('settings/base.py', True),
     ('settings/development.py', True),
     ('settings/local.py', True),
@@ -19,12 +20,12 @@ FILES = (
 )
 
 def generate(app, path, in_app=False):
+    print(u'Generating {}'.format(path))
     template = env.get_template(path)
     data = template.render(app=app)
     path = [app, path]
     if in_app:
         path.insert(0, app)
-    print(u'Generating {}'.format(path))
     with open(os.path.join(*path), 'w') as f:
         f.write(data)
 
@@ -36,6 +37,7 @@ def new(app):
     
     p = Popen(['pip', 'install', 'django'])
     p.wait()
+
     
     p = Popen(['django-admin.py', 'startproject', app])
     p.wait()
