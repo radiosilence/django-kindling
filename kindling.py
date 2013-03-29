@@ -17,15 +17,24 @@ FILES = (
     ('settings/celery_development.py', True),
     ('settings/celery_local.py', True),
     ('settings/celery_production.py', True),
+    ('static/javascripts/default.build.js', True),
+    ('static/javascripts/jquery.cookie.js', True),
+    ('static/javascripts/main.build.js', True),
+    ('static/javascripts/main.js', True),
 )
 
 def generate(app, path, in_app=False):
     print(u'Generating {}'.format(path))
     template = env.get_template(path)
+    path = os.path.split(path)
     data = template.render(app=app)
-    path = [app, path]
+    path = [app] + list(path)
     if in_app:
         path.insert(0, app)
+    directory = os.path.join(*path[:-1])
+    if not os.path.exists(directory):
+        print("Made dir {}".format(directory))
+        os.makedirs(directory)
     with open(os.path.join(*path), 'w') as f:
         f.write(data)
 
@@ -42,10 +51,9 @@ def new(app):
     p = Popen(['django-admin.py', 'startproject', app])
     p.wait()
 
-    p =Popen(['git', 'init', app])
+    p = Popen(['git', 'init', app])
     p.wait()
     
-    os.mkdir(os.path.join(app, app, 'settings'))
     os.remove(os.path.join(app, app, 'settings.py'))
     for args in FILES:
         generate(app, *args)
