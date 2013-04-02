@@ -1,24 +1,21 @@
 from fabric.api import *
 from devops import (
-    initialise as _initialise,
-    upgrade,
-    manage,
-    celery,
-    restart,
-    virtualenv,
-    shell,
     _init,
+    celery,
+    debug,
+    initialise as _initialise,
+    manage,
+    restart,
+    shell,
+    upgrade,
+    virtualenv,
 )
 
 env.project = '{{ project }}'
 env.repo = '{{ app }}'
 env.app = env.repo
 env.application = 'django'
-env.debug_host = '0.0.0.0:{{ port }}'
-
-
-def debug():
-    local('./manage.py runserver {}'.format(env.debug_host))
+env.debug_port = 8000
 
 
 def test(app=None):

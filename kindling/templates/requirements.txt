@@ -1,5 +1,5 @@
 -e git+git://github.com/etianen/django-require.git#egg=django-require
--e git+git@codebasehq.com:linkscreative/links-creative/devops.git#egg=devops8
+links-devops>=0.1.2
 -e git://github.com/yourcelf/django-jimmypage.git#egg=django_jimmypage-dev
 django-apptemplates>=0.0.1
 django-breadcrumbs
