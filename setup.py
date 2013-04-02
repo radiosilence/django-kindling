@@ -19,7 +19,7 @@ setup(
     author_email='jc@blackflags.co.uk',
     packages=find_packages(),
     include_package_data=True,
-    license="LICENSE.txt",
+    license='MIT',
     install_requires=requires,
     dependency_links=dep_links,
     entry_points = {
