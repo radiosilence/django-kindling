@@ -47,10 +47,6 @@ def new(app):
     if os.path.exists(app):
         print('App already exists.')
         sys.exit()
-
-    p = Popen(['pip', 'install', 'django'])
-    p.wait()
-
     
     p = Popen(['django-admin.py', 'startproject', app])
     p.wait()
