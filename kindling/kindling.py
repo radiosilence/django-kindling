@@ -44,6 +44,10 @@ def new(app):
         print('App must be set.')
         sys.exit()
     
+    if os.path.exists(app):
+        print('App already exists.')
+        sys.exit()
+
     p = Popen(['pip', 'install', 'django'])
     p.wait()
 
