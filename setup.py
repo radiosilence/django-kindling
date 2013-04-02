@@ -22,4 +22,9 @@ setup(
     license="LICENSE.txt",
     install_requires=requires,
     dependency_links=dep_links,
+    entry_points = {
+        'console_scripts': [
+            'kindling = kindling:main',
+        ]
+    }
 )
