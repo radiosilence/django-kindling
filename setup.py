@@ -24,7 +24,7 @@ setup(
     dependency_links=dep_links,
     entry_points = {
         'console_scripts': [
-            'kindling = kindling:main',
+            'kindling = kindling.kindling:main',
         ]
     }
 )
