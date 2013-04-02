@@ -8,9 +8,9 @@ Quickstart
 
 To get started::
 
-    mkvirtualenv yourproject
-    pip install django-kindling
-    kindling yourproject
+    % mkvirtualenv yourproject
+    (yourproject) % pip install django-kindling
+    (yourproject) % kindling yourproject
 
 
 Todos
