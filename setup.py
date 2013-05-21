@@ -11,7 +11,7 @@ for dep in open('requirements.txt').read().split("\n"):
 
 setup(
     name='django-kindling',
-    version="0.1.3",
+    version="0.1.4",
     description='Create nice new Django projects.',
     long_description=open('README.rst').read(),
     url='https://github.com/radiosilence/django-kindling',

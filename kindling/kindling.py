@@ -18,6 +18,8 @@ FILES = (
     ('settings/celery_local.py', True),
     ('settings/celery_production.py', True),
     ('static/javascripts/default.build.js', True),
+    ('static/javascripts/require.js', True),
+    ('static/javascripts/jquery.js', True),
     ('static/javascripts/jquery.cookie.js', True),
     ('static/javascripts/main.build.js', True),
     ('static/javascripts/main.js', True),
