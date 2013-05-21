@@ -1,5 +1,3 @@
-static/
-!*/static/
 *.db
 *.pyc
 .DS_Store
