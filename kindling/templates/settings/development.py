@@ -7,6 +7,7 @@ DATABASES['default']['OPTIONS'] = {}
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+REQUIRE_DEBUG = DEBUG
 
 CACHES = {
     'default': {
