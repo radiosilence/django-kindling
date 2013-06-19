@@ -14,6 +14,8 @@ To get started::
     (yourproject) % workon yourproject
     (yourproject) % pip install -r yourproject/requirements.txt
 
+Next, I would recommend you update `fabfile.py` to choose a debug port, live domain name, and enable celery (if needed).
+
 
 Todos
 -----
