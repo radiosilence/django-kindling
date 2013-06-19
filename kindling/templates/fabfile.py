@@ -1,8 +1,9 @@
 from fabric.api import *
-from devops import (
-    _init,
+env.ignore_virtualenv_override = True
+from links_devops import (
     celery,
     debug,
+    init,
     initialise as _initialise,
     manage,
     restart,
@@ -16,6 +17,8 @@ env.repo = '{{ app }}'
 env.app = env.repo
 env.application = 'django'
 env.debug_port = 8000
+env.celery = False
+env.memcached = True
 
 
 def test(app=None):
