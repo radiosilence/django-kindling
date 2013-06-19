@@ -1,5 +1,5 @@
 -e git+git://github.com/etianen/django-require.git#egg=django-require
-links-devops>=0.1.6.1
+links-devops>=0.1.7
 dapper-devops>=0.1.6
 servers.py>=0.1.5
 django-apptemplates>=0.0.1
