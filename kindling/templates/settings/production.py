@@ -1,4 +1,4 @@
-from .settings import *
+from .base import *
 
 DATABASES['default']['NAME'] = '{{ app }}_live'
 DATABASES['default']['USER'] = '{{ app }}_live'
